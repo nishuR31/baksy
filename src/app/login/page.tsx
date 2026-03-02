@@ -55,7 +55,24 @@ export default function LoginPage() {
           <button
             type="button"
             className="mt-2 px-6 py-2 rounded bg-[#A0A4B8] text-white font-semibold hover:bg-[#8B95B0] transition"
-            onClick={() => login({ email: 'demo@baksy.com', password: 'demo123', demo: true })}
+            onClick={() => {
+              // Set demo user data in context
+              const demoUser = {
+                id: 'demo-id',
+                email: 'demo@baksy.com',
+                username: 'DemoUser',
+                userName: 'DemoUser',
+                avatar: '',
+                provider: 'demo',
+              };
+              // Use setUser from context
+              if (typeof window !== 'undefined') {
+                // Dynamically import context to avoid hook issues
+                import('@/context/UserContext').then((mod) => {
+                  mod.useUser().setUser(demoUser);
+                });
+              }
+            }}
             disabled={loading}
           >
             Login as Demo User
