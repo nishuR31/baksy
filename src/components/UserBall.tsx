@@ -57,7 +57,7 @@ export default function UserBall() {
             )}
           </span>
           <span className="text-lg font-semibold">
-            {user ? user.name || 'Dashboard' : 'Login / Register'}
+            {user ? user.userName || 'Dashboard' : 'Login / Register'}
           </span>
         </button>
       </div>

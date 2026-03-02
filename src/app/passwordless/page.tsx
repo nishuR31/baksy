@@ -1,8 +1,9 @@
-"use client";
+'use client';
 import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import axios from 'axios';
+import NavButton from '@/components/ui/Button';
 
 export default function PasswordlessPage() {
   const [email, setEmail] = useState('');
@@ -49,6 +50,13 @@ export default function PasswordlessPage() {
             {loading ? 'Sending...' : 'Send Login Link'}
           </button>
         </form>
+        <div className="mt-6 flex flex-row gap-2 justify-around text-sm text-[#8B95B0]">
+          <NavButton name="Login" url="/login" iconName="LogInIcon" />
+
+          <NavButton name="back" url="" type="back" iconName="MoveLeftIcon" />
+
+          <NavButton name="Home" url="/home" iconName="HomeIcon" />
+        </div>
       </main>
       <Footer />
     </>

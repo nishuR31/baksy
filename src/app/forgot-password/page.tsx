@@ -1,7 +1,10 @@
+'use client';
+
 import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import axios from 'axios';
+import NavButton from '@/components/ui/Button';
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState('');
@@ -28,7 +31,7 @@ export default function ForgotPasswordPage() {
     <>
       <Header />
       <main className="max-w-md mx-auto px-4 py-16 text-[#F0F4FF]">
-        <h1 className="mb-6 text-3xl font-bold">Forgot Password</h1>
+        <h1 className="pt-5 mb-6 text-3xl font-bold">Forgot Password</h1>
         <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
           <input
             type="email"
@@ -47,6 +50,11 @@ export default function ForgotPasswordPage() {
           >
             {loading ? 'Sending...' : 'Send Reset Link'}
           </button>
+          <div className="mt-6 flex flex-row gap-2 justify-around text-sm text-[#8B95B0]">
+            <NavButton name="Login" url="/login" iconName="LogInIcon" />
+
+            <NavButton name="Home" url="/home" iconName="HomeIcon" />
+          </div>
         </form>
       </main>
       <Footer />

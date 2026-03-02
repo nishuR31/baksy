@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useUser } from '@/context/UserContext';
 import Header from '@/components/Header';
-import Footer from '@/components/FOoter';
+import Footer from '@/components/Footer';
 
 export default function LogoutPage() {
   const { logout } = useUser();

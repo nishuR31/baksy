@@ -1,9 +1,10 @@
-"use client";
+'use client';
 import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useUser } from '@/context/UserContext';
 import axios from 'axios';
+import NavButton from '@/components/ui/Button';
 
 export default function LoginPage() {
   const { login, loading } = useUser();
@@ -25,7 +26,7 @@ export default function LoginPage() {
     <>
       <Header />
       <main className="max-w-md mx-auto px-4 py-16 text-[#F0F4FF]">
-        <h1 className="mb-6 text-3xl font-bold">Login</h1>
+        <h1 className="pt-5 mb-6 text-3xl font-bold">Login</h1>
         <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
           <input
             type="email"
@@ -52,13 +53,12 @@ export default function LoginPage() {
             {loading ? 'Logging in...' : 'Login'}
           </button>
         </form>
-        <div className="mt-6 flex flex-col gap-2 text-sm text-[#8B95B0]">
-          <a href="/forgot-password" className="underline text-[#5B8CFF]">
-            Forgot password?
-          </a>
-          <a href="/passwordless" className="underline text-[#5B8CFF]">
-            Passwordless login
-          </a>
+        <div className="mt-6 flex flex-row gap-2 justify-around text-sm text-[#8B95B0]">
+          <NavButton name="Forgot Password" url="/forgot-password" iconName="BadgeQuestionMark" />
+
+          <NavButton name="Passwordless" url="/passwordless" iconName="UnlockIcon" />
+
+          <NavButton name="Back" url="" type="back" iconName="MoveLeftIcon" />
         </div>
         <OAuthButtons />
       </main>
@@ -68,12 +68,15 @@ export default function LoginPage() {
 }
 
 function OAuthButtons() {
+  // Flat list of all providers
   const providers = [
     { name: 'Google', href: '/api/auth/oauth/google' },
-    { name: 'GitHub', href: '/api/auth/oauth/github' },
+    { name: 'Github', href: '/api/auth/oauth/github' },
+    { name: 'Gitlab', href: '/api/auth/oauth/gitlab' },
     { name: 'Facebook', href: '/api/auth/oauth/facebook' },
     { name: 'Xvideos', href: '/api/auth/oauth/xvideos' },
     { name: 'Pornhub', href: '/api/auth/oauth/pornhub' },
+    { name: 'OF', href: '/api/auth/oauth/OF' },
   ];
   return (
     <div className="flex flex-col gap-2 mt-8">
