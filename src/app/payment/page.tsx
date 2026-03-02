@@ -289,7 +289,7 @@ export default function PaymentPage() {
                         </span>
                         <div className="text-right">
                           <div className="text-[18px] font-bold text-[#F0F4FF]">
-                            {promoApplied ? '₹' : PLAN.price}
+                            {promoApplied ? `₹${process.env.NEXT_PUBLIC_PROMOPRICE}` : PLAN.price}
                           </div>
                           <div className="text-[11px] text-[#4A5270] line-through">
                             {PLAN.original}
@@ -298,7 +298,7 @@ export default function PaymentPage() {
                       </div>
                       <div className="text-[11px] font-mono text-[#22D3A0]">
                         {PLAN.discount}
-                        {promoApplied ? ' + extra 10%' : ''}
+                        {promoApplied ? ` + extra ${Math.abs((100 * offerPrice) / price - 100)}% off` : ''}
                       </div>
                     </div>
 
