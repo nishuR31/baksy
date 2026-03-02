@@ -52,6 +52,14 @@ export default function LoginPage() {
           >
             {loading ? 'Logging in...' : 'Login'}
           </button>
+          <button
+            type="button"
+            className="mt-2 px-6 py-2 rounded bg-[#A0A4B8] text-white font-semibold hover:bg-[#8B95B0] transition"
+            onClick={() => login({ email: 'demo@baksy.com', password: 'demo123', demo: true })}
+            disabled={loading}
+          >
+            Login as Demo User
+          </button>
         </form>
         <div className="mt-6 flex flex-row gap-2 justify-around text-sm text-[#8B95B0]">
           <NavButton name="Forgot Password" url="/forgot-password" iconName="BadgeQuestionMark" />
