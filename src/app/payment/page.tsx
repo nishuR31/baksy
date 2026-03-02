@@ -102,7 +102,7 @@ export default function PaymentPage() {
   };
 
   const handleApplyPromo = () => {
-    if (promoCode.toLowerCase() === process.env.PROMO) {
+    if (promoCode.toLowerCase() === process.env.NEXT_PUBLIC_PROMO) {
       setPromoApplied(true);
       toast.success('Promo code applied!', { description: 'Extra 10% off applied to your order.' });
     } else {
