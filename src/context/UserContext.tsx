@@ -43,7 +43,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
   const login = async (data: any) => {
     setLoading(true);
     try {
-      if (data.demo) {
+      if (data) {
         // Set demo user directly
         setUser({
           id: 'demo-id',
