@@ -169,7 +169,7 @@ export default function Header() {
                 href="/payment"
                 className="btn-shimmer mt-4 flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-[14px] font-semibold text-white"
               >
-                Buy Now — $49
+                Buy Now — Rs{process.env.NEXT_PUBLIC_OFFERPRICE}
               </Link>
             </nav>
           </div>
