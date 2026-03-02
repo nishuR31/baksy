@@ -6,7 +6,7 @@ export default function PrivacyPage() {
     <>
       <Header />
       <main className="max-w-3xl mx-auto px-4 py-16 text-[#F0F4FF]">
-        <h1 className="pt-5 mb-6 text-4xl font-bold">Privacy Policy</h1>
+        <h1 className="pt-10 mb-6 text-4xl font-bold">Privacy Policy</h1>
         <p className="mb-4 text-[#8B95B0]">
           Your privacy is important to us. This policy explains how we handle your data and protect
           your information when you use Baksy.

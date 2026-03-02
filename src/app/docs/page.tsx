@@ -198,7 +198,7 @@ function CodeBlock({ title, lang, code }: { title: string; lang: string; code: s
   };
 
   return (
-    <div className="mb-6 code-block">
+    <div className="pt-10 mb-6 code-block">
       <div className="justify-between code-header">
         <div className="flex items-center gap-2">
           <span className="code-dot code-dot-red" />
@@ -253,7 +253,7 @@ export default function DocsPage() {
         <div className="px-6 mx-auto max-w-7xl">
           {/* Hero */}
           <div className="mb-12 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-[rgba(139,92,246,0.2)] mb-5">
+            <div className="pt-10 inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-[rgba(139,92,246,0.2)] mb-5">
               <span className="font-mono text-[11px] tracking-widest text-[#8B95B0] uppercase">Documentation</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-[#F0F4FF] mb-3">

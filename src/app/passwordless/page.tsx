@@ -30,7 +30,7 @@ export default function PasswordlessPage() {
     <>
       <Header />
       <main className="max-w-md mx-auto px-4 py-16 text-[#F0F4FF]">
-        <h1 className="mb-6 text-3xl font-bold">Passwordless Login</h1>
+        <h1 className="pt-10 mb-6 text-3xl font-bold">Passwordless Login</h1>
         <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
           <input
             type="email"

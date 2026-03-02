@@ -145,7 +145,7 @@ function GithubProfile() {
     <main className="relative bg-[#0B0F19] min-h-screen">
       <Header />
       <div className="flex flex-col items-center justify-center min-h-screen p-8 text-white bg-gray-950">
-        <h1 className="mb-4 text-3xl font-bold">GitHub Profile</h1>
+        <h1 className="pt-10 mb-4 text-3xl font-bold">GitHub Profile</h1>
         <img
           src={githubUser.avatarUrl}
           alt="Profile"
