@@ -43,8 +43,20 @@ export function UserProvider({ children }: { children: ReactNode }) {
   const login = async (data: any) => {
     setLoading(true);
     try {
-      const res = await axios.post('/api/auth/login', data, { withCredentials: true });
-      setUser(res.data.user);
+      if (data.demo) {
+        // Set demo user directly
+        setUser({
+          id: 'demo-id',
+          email: 'demo@baksy.com',
+          username: 'DemoUser',
+          userName: 'DemoUser',
+          avatar: '',
+          provider: 'demo',
+        });
+      } else {
+        const res = await axios.post('/api/auth/login', data, { withCredentials: true });
+        setUser(res.data.user);
+      }
     } finally {
       setLoading(false);
     }
