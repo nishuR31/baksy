@@ -89,7 +89,7 @@ export default function PricingSection() {
               <div>
                 <div className="text-[#4A5270] line-through text-lg font-mono">Rs{price}/-</div>
                 <div className="text-[12px] text-[#22D3A0] font-mono">
-                  Maths.abs({(100 * offerPrice) / price - 100})% off launch
+                  {Math.abs((100 * offerPrice) / price - 100)}% off launch
                 </div>
               </div>
             </div>
