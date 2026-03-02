@@ -298,7 +298,9 @@ export default function PaymentPage() {
                       </div>
                       <div className="text-[11px] font-mono text-[#22D3A0]">
                         {PLAN.discount}
-                        {promoApplied ? ` + extra ${Math.abs((100 * offerPrice) / price - 100)}% off` : ''}
+                        {promoApplied
+                          ? ` + extra ${Math.abs((100 * process.env.NEXT_PUBLIC_PROMOPRICE) / offerPrice - 100)}% off`
+                          : ''}
                       </div>
                     </div>
 
