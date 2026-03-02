@@ -132,7 +132,7 @@ export default function PaymentPage() {
       <main className="relative z-10 px-6 pb-20 pt-28">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="pt-10 text-center mb-14">
+          <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-[rgba(139,92,246,0.2)] mb-6">
               <span className="relative flex w-2 h-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22D3A0] opacity-75" />
