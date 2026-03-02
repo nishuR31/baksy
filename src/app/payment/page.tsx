@@ -20,6 +20,7 @@ const PAYMENT_MODES = [
     badgeColor: '#5B8CFF',
     features: ['Visa, Mastercard, Amex', 'Instant processing', '3D Secure', 'Global support'],
     color: '#5B8CFF',
+    available: true,
   },
   {
     id: 'razorpay',
@@ -30,6 +31,7 @@ const PAYMENT_MODES = [
     badgeColor: '#22D3A0',
     features: ['UPI / GPay / PhonePe', 'Net Banking', 'EMI options', 'INR supported'],
     color: '#22D3A0',
+    available: true,
   },
   {
     id: 'paypal',
@@ -40,6 +42,7 @@ const PAYMENT_MODES = [
     badgeColor: '#A78BFA',
     features: ['PayPal balance', 'Buyer protection', '200+ countries', 'No card needed'],
     color: '#A78BFA',
+    available: false,
   },
   {
     id: 'crypto',
@@ -50,6 +53,7 @@ const PAYMENT_MODES = [
     badgeColor: '#FF8C42',
     features: ['Bitcoin (BTC)', 'Ethereum (ETH)', 'USDC stablecoin', 'Coinbase Commerce'],
     color: '#FF8C42',
+    available: false,
   },
   {
     id: 'bank',
@@ -60,6 +64,7 @@ const PAYMENT_MODES = [
     badgeColor: '#FF6B6B',
     features: ['SWIFT / SEPA', 'ACH (US)', 'Manual invoice', 'Net 30 terms'],
     color: '#FF6B6B',
+    available: true,
   },
   {
     id: 'giftcard',
@@ -70,6 +75,7 @@ const PAYMENT_MODES = [
     badgeColor: '#FFD700',
     features: ['Instant redemption', 'No expiry', 'Partial use', 'Stackable'],
     color: '#FFD700',
+    available: true,
   },
 ];
 
@@ -167,73 +173,76 @@ export default function PaymentPage() {
                 Select Payment Method
               </h2>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                {PAYMENT_MODES.map((mode) => (
-                  <button
-                    key={mode.id}
-                    onClick={() => handleSelectMode(mode.id)}
-                    className={`text-left p-5 rounded-2xl border transition-all duration-300 ${
-                      selectedMode === mode.id
-                        ? 'border-[rgba(139,92,246,0.5)] bg-[rgba(139,92,246,0.08)]'
-                        : 'glass-card hover:border-[rgba(139,92,246,0.25)]'
-                    }`}
-                    style={
-                      selectedMode === mode.id ? { boxShadow: `0 0 30px ${mode.color}20` } : {}
-                    }
-                  >
-                    <div className="flex items-start justify-between mb-3">
-                      <div className="flex items-center gap-3">
-                        <span className="text-2xl">{mode.icon}</span>
-                        <div>
-                          <div className="text-[14px] font-semibold text-[#F0F4FF]">
-                            {mode.name}
+                {PAYMENT_MODES.map(
+                  (mode) =>
+                    mode.available && (
+                      <button
+                        key={mode.id}
+                        onClick={() => handleSelectMode(mode.id)}
+                        className={`text-left p-5 rounded-2xl border transition-all duration-300 ${
+                          selectedMode === mode.id
+                            ? 'border-[rgba(139,92,246,0.5)] bg-[rgba(139,92,246,0.08)]'
+                            : 'glass-card hover:border-[rgba(139,92,246,0.25)]'
+                        }`}
+                        style={
+                          selectedMode === mode.id ? { boxShadow: `0 0 30px ${mode.color}20` } : {}
+                        }
+                      >
+                        <div className="flex items-start justify-between mb-3">
+                          <div className="flex items-center gap-3">
+                            <span className="text-2xl">{mode.icon}</span>
+                            <div>
+                              <div className="text-[14px] font-semibold text-[#F0F4FF]">
+                                {mode.name}
+                              </div>
+                              <div className="text-[11px] text-[#4A5270] mt-0.5">
+                                {mode.description}
+                              </div>
+                            </div>
                           </div>
-                          <div className="text-[11px] text-[#4A5270] mt-0.5">
-                            {mode.description}
+                          <div
+                            className="w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 mt-0.5"
+                            style={{
+                              borderColor:
+                                selectedMode === mode.id ? mode.color : 'rgba(255,255,255,0.2)',
+                            }}
+                          >
+                            {selectedMode === mode.id && (
+                              <div
+                                className="w-2.5 h-2.5 rounded-full"
+                                style={{ background: mode.color }}
+                              />
+                            )}
                           </div>
                         </div>
-                      </div>
-                      <div
-                        className="w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 mt-0.5"
-                        style={{
-                          borderColor:
-                            selectedMode === mode.id ? mode.color : 'rgba(255,255,255,0.2)',
-                        }}
-                      >
-                        {selectedMode === mode.id && (
-                          <div
-                            className="w-2.5 h-2.5 rounded-full"
-                            style={{ background: mode.color }}
-                          />
-                        )}
-                      </div>
-                    </div>
-                    <div className="flex flex-wrap gap-1.5 mb-3">
-                      {mode.features.map((f) => (
+                        <div className="flex flex-wrap gap-1.5 mb-3">
+                          {mode.features.map((f) => (
+                            <span
+                              key={f}
+                              className="text-[10px] font-mono px-2 py-0.5 rounded-full"
+                              style={{
+                                background: `${mode.color}15`,
+                                color: mode.color,
+                                border: `1px solid ${mode.color}30`,
+                              }}
+                            >
+                              {f}
+                            </span>
+                          ))}
+                        </div>
                         <span
-                          key={f}
-                          className="text-[10px] font-mono px-2 py-0.5 rounded-full"
+                          className="text-[10px] font-mono px-2.5 py-1 rounded-full"
                           style={{
-                            background: `${mode.color}15`,
-                            color: mode.color,
-                            border: `1px solid ${mode.color}30`,
+                            background: `${mode.badgeColor}15`,
+                            color: mode.badgeColor,
+                            border: `1px solid ${mode.badgeColor}30`,
                           }}
                         >
-                          {f}
+                          {mode.badge}
                         </span>
-                      ))}
-                    </div>
-                    <span
-                      className="text-[10px] font-mono px-2.5 py-1 rounded-full"
-                      style={{
-                        background: `${mode.badgeColor}15`,
-                        color: mode.badgeColor,
-                        border: `1px solid ${mode.badgeColor}30`,
-                      }}
-                    >
-                      {mode.badge}
-                    </span>
-                  </button>
-                ))}
+                      </button>
+                    )
+                )}
               </div>
 
               {/* Promo code */}
