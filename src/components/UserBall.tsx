@@ -1,5 +1,5 @@
+'use client';
 import { User, Key } from 'lucide-react';
-('use client');
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { useUser } from '@/context/UserContext';
