@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -23,7 +23,7 @@ export default function DashboardPage() {
     <>
       <Header />
       <main className="max-w-2xl mx-auto px-4 py-16 text-[#F0F4FF]">
-        <h1 className="mb-6 text-3xl font-bold">Welcome, {user.name || 'User'}!</h1>
+        <h1 className="mb-6 text-3xl font-bold">Welcome, {user.userName || 'User'}!</h1>
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-4">
             {user.avatar && (

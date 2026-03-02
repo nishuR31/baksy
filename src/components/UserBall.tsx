@@ -1,4 +1,5 @@
-'use client';
+import { User, Key } from 'lucide-react';
+('use client');
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { useUser } from '@/context/UserContext';
@@ -32,10 +33,10 @@ export default function UserBall() {
             user.avatar ? (
               <img src={user.avatar} alt="avatar" className="w-12 h-12 rounded-full" />
             ) : (
-              '👤'
+              <User size={36} />
             )
           ) : (
-            '🔑'
+            <Key size={36} />
           )}
         </span>
       </div>
@@ -50,10 +51,10 @@ export default function UserBall() {
               user.avatar ? (
                 <img src={user.avatar} alt="avatar" className="w-8 h-8 rounded-full" />
               ) : (
-                '👤'
+                <User size={24} />
               )
             ) : (
-              '🔑'
+              <Key size={24} />
             )}
           </span>
           <span className="text-lg font-semibold">
