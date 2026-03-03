@@ -1,7 +1,0 @@
-{
-  "/login/page": "app/login/page.js",
-  "/forgot-password/page": "app/forgot-password/page.js",
-  "/passwordless/page": "app/passwordless/page.js",
-  "/how-to-use/page": "app/how-to-use/page.js",
-  "/home/page": "app/home/page.js"
-}
