@@ -8,6 +8,7 @@
 [![Node](https://img.shields.io/badge/Nodejs-000000?logo=nodedotjs&logoColor=000&color=5FA04E)](https://www.nodejs.org/)
 [![NPM](https://img.shields.io/badge/Npm-000000?logo=NPM&logoColor=000&color=CB3837)](https://www.npmjs.org/)
 [![JavaScript](https://img.shields.io/badge/Javascript-000000?logo=javascript&logoColor=000&color=f7df1e)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
 [![Express](https://img.shields.io/badge/Express-000000?logo=express&logoColor=fff&color=000)](https://expressjs.com/)
 [![Fastify](https://img.shields.io/badge/Fastify-000000?logo=fastify&logoColor=fff&color=000)](https://www.fastify.io/)
 [![Cookies](https://img.shields.io/badge/Cookies-000000?logo=cookiecutter&logoColor=000&color=4b8bbe)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
@@ -17,16 +18,15 @@
 [![PayPal](https://img.shields.io/badge/Paypal-000000?logo=paypal&logoColor=000&color=00457c)](https://paypal.com/)
 [![Paytm](https://img.shields.io/badge/Paytm-000000?logo=paytm&logoColor=000&color=20336B)](https://www.npci.org.in/upi/product-overview)
 [![GPay](https://img.shields.io/badge/Gpay-000000?logo=googlepay&logoColor=000&color=4285F4)](https://www.npci.org.in/upi/product-overview)
-[![OAuth](https://img.shields.io/badge/Oauth-000000?logo=oauth&logoColor=000&color=3c3c3c)](https://oauth.net/)
 
-[![Meta OAuth](https://img.shields.io/badge/meta-000000?logo=meta&logoColor=000&color=4267b2)](https://developers.facebook.com/docs/facebook-login/)
-[![Email](https://img.shields.io/badge/email-000000?logo=gmail&logoColor=000&color=ea4335)](mailto:nishangithub@gmail.com)
-[![Docker](https://img.shields.io/badge/microservice-000000?logo=docker&logoColor=000&color=00bcd4)](https://docker.io/)
-[![Microservice](https://img.shields.io/badge/microservice-000000?logo=microstation&logoColor=fff&color=000)](https://microservices.io/)
-[![Monolith](https://img.shields.io/badge/monolith-000000?logo=monster&logoColor=fff&color=000)](https://en.wikipedia.org/wiki/Monolithic_application)
+[![Meta OAuth](https://img.shields.io/badge/Meta-000000?logo=meta&logoColor=000&color=4267b2)](https://developers.facebook.com/docs/facebook-login/)
+[![Email](https://img.shields.io/badge/email-000000?logo=Email&logoColor=000&color=ea4335)](mailto:nishangithub@gmail.com)
+[![Docker](https://img.shields.io/badge/Docker-000000?logo=docker&logoColor=000&color=00bcd4)](https://docker.io/)
+[![Microservice](https://img.shields.io/badge/Microservice-000000?logo=microstation&logoColor=fff&color=000)](https://microservices.io/)
+[![Monolith](https://img.shields.io/badge/Monolith-000000?logo=monster&logoColor=fff&color=000)](https://en.wikipedia.org/wiki/Monolithic_application)
 [![Google OAuth](https://img.shields.io/badge/Google-4285f4?logo=google&logoColor=white)](https://developers.google.com/identity/protocols/oauth2)
 [![Google Auth](https://img.shields.io/badge/Google%20Authenticator-4285f4?logo=googleauthenticator&logoColor=white)](https://developers.google.com/identity/protocols/oauth2)
-[![GitHub OAuth](https://img.shields.io/badge/github-181717?logo=github&logoColor=white)](https://docs.github.com/en/apps/oauth-apps)
+[![GitHub OAuth](https://img.shields.io/badge/Github-181717?logo=github&logoColor=white)](https://docs.github.com/en/apps/oauth-apps)
 
 Baksy is a modern, closed-source backend scaffolding CLI for rapidly building, configuring, and deploying production-ready backend projects. It helps you scaffold APIs, authentication, payment integrations, and more, with minimal setup. Baksy is dev-friendly, fast, and simple to use—no complex setup required.
 
