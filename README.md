@@ -54,9 +54,9 @@ pnpm add -g baksy
 
 or
 
-````bash
+```bash
 npx baksy --commands
-``
+```
 
 
 
@@ -66,7 +66,7 @@ npx baksy --commands
 
 ```bash
 baksy login --token
-````
+```
 
 Authenticate with your credentials or use demo mode.
 
